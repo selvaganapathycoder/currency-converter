@@ -1,0 +1,137 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
+  color: #333;
+  transition: background 0.4s, color 0.4s;
+}
+
+.container {
+  background: white;
+  padding: 25px 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 360px;
+  text-align: center;
+  position: relative;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+
+input, select, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.selectors {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.selectors span {
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+/* Dark Mode */
+body.dark {
+  background: linear-gradient(to right, #232526, #414345);
+  color: #eee;
+}
+
+body.dark .container {
+  background: #2c2c2c;
+  color: #eee;
+}
+
+body.dark input,
+body.dark select {
+  background: #444;
+  color: #fff;
+  border: 1px solid #666;
+}
+
+body.dark button {
+  background-color: #3399ff;
+}
+
+body.dark button:hover {
+  background-color: #227acc;
+}
+
+/* Dark Mode  */
+.switch {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  width: 40px;
+  height: 20px;
+  background: #ccc;
+  border-radius: 20px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.slider::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: 0.3s;
+}
+
+input:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+input:checked + .slider {
+  background: #007bff;
+}
+
+#result {
+  margin-top: 15px;
+  font-weight: bold;
+}
